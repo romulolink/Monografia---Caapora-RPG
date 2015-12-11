@@ -143,29 +143,20 @@
 % Exemplo de uso:
 % \membrodabancadois{Prof. Dr. Fulano de Tal}
 % \membrodabancadoisies{Universidade Estadual do Ceará - UECE}
-
 \membrodabancadois{Membro da Banca Dois}
 \membrodabancadoiscentro{Faculdade de Filosofia Dom Aureliano Matos – FAFIDAM}
 \membrodabancadoisies{Universidade do Membro da Banca Dois - SIGLA}
 \membrodabancatres{Membro da Banca Três}
 \membrodabancatrescentro{Centro de Ciências e Tecnologia - CCT}
 \membrodabancatresies{Universidade do Membro da Banca Três - SIGLA}
-\membrodabancaquatro{Membro da Banca Quatro}
-\membrodabancaquatrocentro{Centro de Ciências e Tecnologia - CCT}
-\membrodabancaquatroies{Universidade do Membro da Banca Quatro - SIGLA}
-\membrodabancacinco{Membro da Banca Cinco}
-\membrodabancacincocentro{Teste}
-\membrodabancacincoies{Universidade do Membro da Banca Cinco - SIGLA}
-\membrodabancaseis{Membro da Banca Seis}
-\membrodabancaseiscentro{}
-\membrodabancaseisies{Universidade do Membro da Banca Seis - SIGLA}
+
+
 
 \begin{document}	
 	% Elementos pré-textuais
-	\imprimircapa
+    \imprimircapa
 	\imprimirfolhaderosto{}
 	\imprimirfichacatalografica{elementos-pre-textuais/ficha-catalografica}
-	\imprimirerrata{elementos-pre-textuais/errata}
 	\imprimirfolhadeaprovacao
 	\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
 	\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
@@ -174,10 +165,8 @@
 	\imprimirabstract{elementos-pre-textuais/abstract}
 	\imprimirlistadeilustracoes
 	\imprimirlistadetabelas
-	\imprimirlistadequadros
-	\imprimirlistadealgoritmos
-	\imprimirlistadeabreviaturasesiglas	
-	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
+   \imprimirlistadeabreviaturasesiglas{elementos-pre-textuais/lista-de-abreviaturas-e-siglas}	
+
 	\imprimirsumario
 	
 	%Elementos textuais
@@ -185,8 +174,8 @@
 	\input{elementos-textuais/introducao}
 	\input{elementos-textuais/fundamentacao-teorica}
 	\input{elementos-textuais/trabalhos-relacionados}
-	\input{elementos-textuais/metodologia}
-	\input{elementos-textuais/resultados}
+	\input{elementos-textuais/analise-e-levantamento-de-requisitos}	
+	\input{elementos-textuais/desenvolvimento}
 	\input{elementos-textuais/conclusao}
 	
 	%Elementos pós-textuais	
@@ -194,13 +183,9 @@
 	\imprimirglossario	
 	\imprimirapendices
 		% Adicione aqui os apendices do seu trabalho
-		\input{elementos-pos-textuais/apendices/historico-de-mudancas}
-		\input{elementos-pos-textuais/apendices/lorem-ipsum}
-		\input{elementos-pos-textuais/apendices/termo-de-fiel-depositario}	
-	\imprimiranexos
-		% Adicione aqui os anexos do seu trabalho
-		\input{elementos-pos-textuais/anexos/exemplo-de-anexo}		
-		\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
-	\imprimirindice
+				\input{elementos-pos-textuais/apendices/lorem-ipsum}
+			
+
+	
 
 \end{document}

@@ -1,0 +1,264 @@
+\chapter{Desenvolvimento}
+\label{cap:desenvolvimento}
+
+
+Neste capitulo, serão apresentados os conceitos envolvidos no desenvolvimento do jogo.
+
+\section{Cena do Menu Principal}
+O menu principal é a primeira tela que o usuário terá contato ao abrir a aplicação. Nela o usuário poderá começar o jogo, selecionar personagem, alterar configuração de som e sair do jogo.
+
+A figura 20 apresenta a tela inicial do jogo que será apresentada ao usuário.
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Menu Principal}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/Menu}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+	
+\subsection{Botões}
+Para criar os botões no menu foi utilizado um componente chamado UI, ele é um sistema que permite criar interfaces rápida e intuitivas. 
+
+\subsection{Título }
+Para criar o titulo foi usado um componente do sistema UI, chamado text que permite inserir um texto dentro de uma determinada área. Ele também permite editar alguns detalhes como tipo de fonte, tamanho e cor.
+
+\subsection{Imagem de fundo}
+Para inserir a imagem de fundo foi preciso adicionar um componente do UI chamado Panel. Ele delimita a área da do jogo, facilitando assim a inserção da imagem de fundo.
+
+\section{Cena do Jogo}
+A cena do jogo foi construída tendo como base o mapa isométrico, que é um cenário mais próximo do 3D. Foi utilizado alguns recursos como: Tilesets, Sprites, Animação, Collider, Rigidbody e Camera.
+
+A figura 21 mostra o cenário completo.
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Uso da engine Unity 3D para desenvovlvimento do jogo Caapora}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/cena}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+\subsection{Tilesets}
+Os tilesets são elementos gráficos dentro de uma imagem. Eles possuem tudo o que é preciso para a construção de mapas e são classificados de acordo ao tipo de mapa que será criado, no caso do jogo caipora, foi usado um tileset da floresta.
+
+Na figura 22 temos o tileset usado no jogo.
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Tileset utilizado na criação do cenário}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=8cm]{figuras/tileset}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+\subsection{Sprites}
+Os sprites são elementos gráficos dentro de uma única imagem que tem como objetivo criar animações. Eles foram usados na criação dos personagens e dos animais.
+
+A figura 23 mostra um dos sprites do caipora.
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Sprite do caipora correndo}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=6cm]{figuras/sprite}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+
+\subsection{Animação}
+A animação, tanto dos personagens quanto dos animais é criado dentro de um componente do Unity chamado Animation. Nele é criado um clipe de animação para cada ação do personagem, onde os sprites são inseridos individualmente em uma linha do tempo e é determinada a velocidade que terá a animação.
+
+A figura 24 mostra a criação do clipe de animação “Caapora-left”, onde temos uma seqüência de sprites inseridos na linha do tempo.
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Componente Animation}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/componente}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+
+Após a criação dos clipes de animação, é necessário criar as transições entre eles. Para isso o unity fornece um componente chamado Animator. No animator os clipes de animação são ligados através das transições e é criado condições para que haja a transição, ou seja, sempre que houver uma condição dentro do jogo, haverá uma mudança entre os clipes de animação.
+	
+A figura 25 mostra os clipes de animação dentro do animator e as transições que há entre eles.
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Componente Animator}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/animator}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+
+
+\subsection{Collider}
+O colisor é um componente que impede que um objeto transpasse o outro, ele define a forma de um objeto para fins de colisões físicas.
+
+	Na figura 26 temos um tile e o elemento de colisão em volta. As linhas que traçam um retângulo representam o colisor.
+	\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Uso da engine Unity 3D para desenvovlvimento do jogo Caapora}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/colisor}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+
+
+\subsection{Rigidbody}
+
+
+O RIGIDBODY é um componente que permite um comportamento físico em um determinado objeto. Quando esse componente é anexado ao objeto, automaticamente esse objeto vai responder a gravidade.
+
+A figura 27 mostra o componente Rigidbody.
+	
+	\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Uso da engine Unity 3D para desenvovlvimento do jogo Caapora}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/rigi}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+
+
+
+\section{Mecanismos}
+
+
+\subsection{Pegar Balde}
+ Para poder implementar este mecanismo foram utilizados os componentes BoxCollider do personagem e do elemento balde que ao, identificar a colisão um com o outro, permite que o caipora pegue o balde inserindo-o em seu inventário destruindo o objeto balde do cenário dando a impressão do objeto ter sido coletado. O estado do personagem então muda para um estado que identifica ele com o balde e da mesma forma, habilita a animação do caipora para a animação com o balde permitindo que ele colete a água.
+
+A figura N apresenta o personagem prestes a pegar o balde
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Caipora e balde}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/CaiporaPegarBalde}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+	
+	
+	
+	A figura N apresenta o personagem já com o balde
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Caipora com o balde}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/CaiporaComBalde}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+	
+	
+\subsection{Encher o balde e Jogar Água}
+Após o Caipora ter pegado o balde ele deverá enche-lo. Para encher o balde o personagem deve ter em seu inventário o balde e ao colidir com o objeto que representa a água no cenário um contador do objeto água é incrementando e o painel de inventário da tela indica visualmente o nível de água que o balde encheu. De acordo com a quantidade de água disponível no balde o personagem então poderá lançar no cenário objetos do tipo borrifo de água, que se auto destrói, usando o método Destroy() e o recurso de Coroutines do motor de jogos Unity3D, logo após ser lançado.
+
+
+A figura N apresenta o Caipora jogando água nas chamas.
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Caipora jogando água}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/CaiporaJogandoAgua}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+	
+	
+	
+\subsection{Chamas}
+São objetos que representam as chamas no mundo real e que causam destruição por onde passam, as chamas se multiplicam pelo cenário automaticamente, com o uso de Coroutines do motor de jogos Unity3D,  em linha ou em círculos e conforme a dificuldade do jogo eles se espalham mais rapidamente. As chamas possuem pontos de dano na classe que as representa que são usados para reduzir os pontos de vida de qualquer personagens vivo no jogo, incluindo árvores. Este comportamento se encontra em todos os seres vivos do jogo que herdam a classe Creature.  
+Para destruir este tipo de objetos é necessário que ele colida com objetos do tipo borrifo de água, que é lançado pelo caipora, causando o efeito de ter apagado as chamas com a água coletada.
+
+
+A figura 20 apresenta as chamas se espalhando.
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Fogo se alastrando}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/FogoSeAlastrando}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+	
+	
+	
+\subsection{Pathfinding}
+O algoritmo de busca de melhor caminho (Pathfinding) A-Star foi usado em duas situações no jogo; para personagens NPC (Non-Player Character) amigos do personagem principal e para os inimigos que seguem o caipora e seus amigos com o objetivo de ataca-los.  Este recurso faz com que os personagens do jogo se movimentem sozinhos no mapa, melhorando consideravelmente a jogabilidade.
+
+
+A figura 20 apresenta o personagem NPC Monkey seguindo o Caipora com um caminho formado pelo algorítmo
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Exemplo de NPC}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/NPC}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+	
+	
+	
+	
+	\section{Estrutura de Classes}
+	
+	\subsection{GameManager}
+	
+Está classe é responsável por gerenciador todo o ciclo de vida do jogo para isso ela  utiliza o padrão de projeto Singleton que garante apenas uma instancia para um objeto durante toda a execução do jogo. Ela que implementa a maior parte da regra de negócio do jogo incluindo condições de vitórias e o fim de jogo.
+
+	\subsection{Enemy}
+Classe que representa os estados e comportamentos dos inimigos no jogo.
+
+
+	\subsection{NPC}
+Personagens deste tipo implementao o agorítimo de pathfinding  de forma que  se movimentem sozinhos no jogo, possuindo uma inteligência artificial. Utiliza os métodos da classe Pathfinding para personagens que perseguem o Caipora, é utilizando tanto amigos quanto em inimigos.
+
+
+	\subsection{Inventory}
+Esta classe tem por finalidade armazenar os obetos coletados pelo personagem principal e exibir suas características. como exemplo temos o balde que no início do jogo o caipora tem que pegá-lo e enche-lo para apagar as chamas que estão queimando a árvore.
+
+
+	\subsection{Tree}
+Esta classe representa as arvores no cenário e possui características herdadas da classe abstrata CreatureBase, possuindo assim pontos de vida e ataque pondendo  morrer ao sofrer danos.
+
+
+	\subsection{Water}
+Classe que representa a água no cenário, ao colidir com o fogo apaga-o. Ao colidir com o Caipora com o balde aumenta a quantidade de água no balde.
+
+
+	\subsection{Fire}
+Classe que representa um fogo no game, possui pontos de dano que são utilizados quando objetos do tipo seres vivos colidem com ele, reduzindo os pontos de vida destes últimos.
+
+
+	\subsection{SpreadFire}
+Classe que automatiza a expansão do fogo pelo cenário, extraindo as instâncias do Object Pool e inserindo no mapa tanto em linha quando em circulos.
