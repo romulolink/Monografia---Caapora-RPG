@@ -29,7 +29,7 @@ Para criar o titulo foi usado um componente do sistema UI, chamado text que perm
 Para inserir a imagem de fundo foi preciso adicionar um componente do UI chamado Panel. Ele delimita a área da do jogo, facilitando assim a inserção da imagem de fundo.
 
 \section{Cena do Jogo}
-A cena do jogo foi construída tendo como base o mapa isométrico, que é um cenário mais próximo do 3D. Foi utilizado alguns recursos como: \textit{Tilesets}, \textit{Sprites}, Animação, \textit{Collider}, \textit{Rigidbody} e Câmera.
+A cena do jogo foi construída tendo como base o mapa isométrico, que é um cenário mais próximo do 3D. Foi utilizado alguns recursos como: \textit{Tilesets}, \textit{Sprites}, Animação, \textit{Collider} e \textit{Rigidbody}.
 
 A figura 21 mostra o cenário completo.
 
@@ -53,12 +53,12 @@ Na figura 22 temos o \textit{tileset} usado no jogo.
 		\UECEfig{}{
 			\fbox{\includegraphics[width=8cm]{figuras/tileset}}
 		}{
-			\Fonte{Elaborado pelo autor}
+			\Fonte{\cite{tile}}
 		}	
 	\end{figure}
 
 \subsection{Sprites}
-Os \textit{sprites} são elementos gráficos dentro de uma única imagem que tem como objetivo criar animações. Eles foram usados na criação dos personagens e dos animais.
+Os \textit{sprites} são elementos gráficos dentro de uma única imagem que tem como objetivo criar animações. Eles foram usados na criação dos personagens e dos animais. 
 
 A figura 23 mostra um dos \textit{sprites} do caipora.
 
@@ -89,9 +89,8 @@ A figura 24 mostra a criação do clipe de animação “Caapora-left”, onde t
 	\end{figure}
 
 
-Após a criação dos clipes de animação, é necessário criar as transições entre eles. Para isso o Unity fornece um componente chamado \textit{Animator}. No \textit{animator}, conforme vemos na figura 25, os clipes de animação são ligados através das transições e é criado condições para que haja a transição, ou seja, sempre que houver uma condição dentro do jogo, haverá uma mudança entre os clipes de animação.
+Após a criação dos clipes de animação, é necessário criar as transições entre eles. Para isso o Unity fornece um componente chamado \textit{Animator}. No \textit{animator}, conforme vemos na figura 25, os clipes de animação são ligados através das transições, que são as setas indo de um clipe para outro, e é criado condições para que haja a transição, ou seja, sempre que houver uma condição dentro do jogo, haverá uma mudança entre os clipes de animação.
 	
-A figura 25 mostra os clipes de animação dentro do \textit{animator} e as transições que há entre eles.
 \pagebreak
 
 \begin{figure}[h!]
@@ -201,7 +200,7 @@ A figura 30 apresenta as chamas se espalhando.
 	
 	
 \subsection{Pathfinding}
-O algoritmo de busca de melhor caminho (\textit{Pathfinding} A* foi usado em duas situações no jogo; para personagens NPC (\textit{Non-Player Character}) amigos do personagem principal e para os inimigos que seguem o caipora e seus amigos com o objetivo de ataca-los.  Este recurso faz com que os personagens do jogo se movimentem sozinhos no mapa, melhorando consideravelmente a jogabilidade.
+O algoritmo de busca de melhor caminho (\textit{Pathfinding}) A* foi usado em duas situações no jogo; para personagens NPC (\textit{Non-Player Character}) amigos do personagem principal e para os inimigos que seguem o caipora e seus amigos com o objetivo de ataca-los.  Este recurso faz com que os personagens do jogo se movimentem sozinhos no mapa, melhorando consideravelmente a jogabilidade.
 
 
 A figura 31 apresenta o personagem NPC \textit{Monkey} seguindo o Caipora com um caminho formado pelo algoritmo A*.
@@ -216,10 +215,11 @@ A figura 31 apresenta o personagem NPC \textit{Monkey} seguindo o Caipora com um
 		}	
 	\end{figure}
 	
-	
+	\pagebreak
 	
 	
 	\section{Estrutura de Classes}
+	A figura 32 apresenta a estrutura de Classes dos Personagens utilizada para o desenvolvimento do jogo.
 	
 	\begin{figure}[h!]
 		\centering
@@ -240,6 +240,8 @@ Classe que representa os estados e comportamentos dos inimigos no jogo.
 
 \subsection{NPC}
 Personagens deste tipo implementam o algorítimo de \textit{pathfinding}  permitindo que movimentem-se sozinhos no jogo, possuindo uma inteligência artificial. Utiliza os métodos da classe \textit{Pathfinding} para personagens que perseguem o Caipora, é utilizando tanto amigos quanto em inimigos.
+
+A figura 33 apresenta a estrutura de Classes dos NPCs utilizada para o desenvolvimento do jogo.
 
 
 	\begin{figure}[h!]
