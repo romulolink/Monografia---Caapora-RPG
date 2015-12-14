@@ -221,6 +221,16 @@ A figura 31 apresenta o personagem NPC \textit{Monkey} seguindo o Caipora com um
 	
 	\section{Estrutura de Classes}
 	
+	\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Estrutura de Classes de Personagens }	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=11cm]{figuras/DiagramaClassesPersonagens}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+	
 \subsection{GameManager}
 Está classe é responsável por gerenciador todo o ciclo de vida do jogo para isso ela  utiliza o padrão de projeto \textit{Singleton} que garante apenas uma instancia para um objeto durante toda a execução do jogo. Ela que implementa a maior parte da regra de negócio do jogo incluindo condições de vitórias e o fim de jogo.
 
@@ -231,6 +241,16 @@ Classe que representa os estados e comportamentos dos inimigos no jogo.
 \subsection{NPC}
 Personagens deste tipo implementam o algorítimo de \textit{pathfinding}  permitindo que movimentem-se sozinhos no jogo, possuindo uma inteligência artificial. Utiliza os métodos da classe \textit{Pathfinding} para personagens que perseguem o Caipora, é utilizando tanto amigos quanto em inimigos.
 
+
+	\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Estrutura de Classes de NPC's }	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=11cm]{figuras/DiagramaClassesNpc}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
 
 \subsection{Inventory}
 Esta classe tem por finalidade armazenar os objetos coletados pelo personagem principal e exibir suas características. Como exemplo temos o balde que no início do jogo o caipora tem que pegá-lo e enche-lo para apagar as chamas que estão queimando as árvores.
