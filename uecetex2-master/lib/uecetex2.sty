@@ -100,6 +100,10 @@
 	skip=0pt                %Retira o espaco entre a figura/tabela e o caption
 }
 
+% Remove o ponto final de cada entrada da 
+%lista de abreviaturas e siglas
+\renewcommand{\glspostdescription}{}
+
 % Espaçamento entre o texto e a legenda
 %\setlength{\belowcaptionskip}{\onelineskip}
 
@@ -491,7 +495,7 @@
 }
 
 \newcommand{\preambulotccgraduacao}{
-	Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
+	Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\  \imprimircentro\ da \imprimiries, como requisito à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
 }
 
 \newcommand{\preambulotccespecializacao}{
@@ -530,7 +534,7 @@
 		% Todos os elementos da capa devem esta em negrito
 		\bfseries
 
-        \includegraphics[scale=0.32]{figuras/ibta} \\
+        \includegraphics[scale=0.32]{figuras/bilac} \\
         \vspace{0.1cm}
 		\MakeUppercase{\imprimiries} \\
 		\MakeUppercase{\imprimircentro} \\
@@ -560,7 +564,7 @@
 		% Todos os elementos da capa devem esta em negrito
 		\bfseries
 
-        \includegraphics[scale=0.32]{figuras/ibta} \\
+        \includegraphics[scale=0.32]{figuras/bilac} \\
         \vspace{0.1cm}
 		\MakeUppercase{\imprimiries} \\
 		\MakeUppercase{\imprimircentro} \\
@@ -590,7 +594,7 @@
 		% Todos os elementos da capa devem esta em negrito
 		\bfseries
 
-        \includegraphics[scale=0.32]{figuras/ibta} \\
+        \includegraphics[scale=0.52]{figuras/bilac} \\
         \vspace{0.1cm}
 		\MakeUppercase{\imprimiries} \\
 		\MakeUppercase{\imprimircentro} \\
@@ -598,7 +602,7 @@
 
 		\vspace{\onelineskip}
 
-		\MakeUppercase{\imprimirautor}
+	    \MakeUppercase{\imprimirautor}
 		
 		\vspace{5cm}
 		

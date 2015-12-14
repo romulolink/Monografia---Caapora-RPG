@@ -20,7 +20,7 @@ Significa atividade, agir de acordo com  situação. O jogador tem que tomar alg
 		\UECEfig{}{
 			\fbox{\includegraphics[width=5cm]{figuras/HalfLife}}
 		}{
-			\Fonte{IGN, 2004}
+			\Fonte{\cite{hl}}
 						
 		}	
 	\end{figure}
@@ -34,7 +34,7 @@ Significa atividade, agir de acordo com  situação. O jogador tem que tomar alg
 		\UECEfig{}{
 			\fbox{\includegraphics[width=7cm]{figuras/MFS}}
 		}{
-			\Fonte{Microsoft News, 2014}			
+			\Fonte{\cite{fs}}			
 		}	
 	\end{figure}
 
@@ -50,7 +50,7 @@ Um jogo muito conhecido que que utiliza deste gênero é o Final Fantasy XIII,  
 		\UECEfig{}{
 			\fbox{\includegraphics[width=6cm]{figuras/FF}}
 		}{
-			\Fonte{Final Fantasy Otaku, 2015}			
+			\Fonte{\cite{ff}}			
 		}	
 	\end{figure}
 	
@@ -65,7 +65,7 @@ mundo virtual, em alguns jogos o personagem cansa e diminui sua velocidade. Um e
 		\UECEfig{}{
 			\fbox{\includegraphics[width=7cm]{figuras/Fifa15}}
 		}{
-			\Fonte{HD Wallpapers, 2014}			
+			\Fonte{\cite{fifa}}			
 		}	
 	\end{figure}
 
@@ -90,7 +90,7 @@ Implementados a partir de gráficos bidimensionais somente com uma camada.
 		\UECEfig{}{
 			\fbox{\includegraphics[width=7cm]{figuras/2D}}
 		}{
-			\Fonte{Wikipedia, 2015}			
+			\Fonte{\cite{2d}}			
 		}	
 	\end{figure}
 
@@ -110,7 +110,7 @@ Se divide na categorias: Isométrico, projeção oblíqua, \textit{billboarding}
 		\UECEfig{}{
 			\fbox{\includegraphics[width=7cm]{figuras/isometrico}}
 		}{
-			\Fonte{Mecânica Geral, 2012}			
+			\Fonte{\cite{25d}}			
 		}	
 	\end{figure}
 	\pagebreak
@@ -133,7 +133,7 @@ Na figura 9 é possível verificar a representação gráfica de um plano 3D (tr
 		\UECEfig{}{
 			\fbox{\includegraphics[width=7cm]{figuras/3D}}
 		}{
-			\Fonte{Wikipedia, 2015}			
+			\Fonte{\cite{3d}}			
 		}	
 	\end{figure}
 	
@@ -474,14 +474,14 @@ A maioria dos jogos digitais desenvolvidos com IA ocorrem nos dois tipos já cit
 	\end{alineascomponto}
 
 	
-As pesquisas iniciaram-se na Segunda Guerra Mundial com os cientistas Hebert Simon, Allen Newell,  Jonh McCarthy com o objetivo em comum de reproduzir uma maquina que simulasse o cérebro humano. (SANTOS,2015) 
+As pesquisas iniciaram-se na Segunda Guerra Mundial com os cientistas Hebert Simon, Allen Newell,  Jonh McCarthy com o objetivo em comum de reproduzir uma maquina que simulasse o cérebro humano. \cite{ia}
 
 \section{Busca Heurística}
 \label{sec:Busca-Heurística}
 
-A busca heurística pode ser definida como uma estrategia que faz uso do conhecimento especifico do problema, sendo possível obter soluções mais eficientes do que uma estratégia sem informação. (Russel e Norvig, 2003).
+A busca heurística pode ser definida como uma estrategia que faz uso do conhecimento especifico do problema, sendo possível obter soluções mais eficientes do que uma estratégia sem informação. \cite{rus}
 
-De acordo com Rich e Knight (1993), heuristca é uma técnica eficiente para um processo de busca. A heurística, mesmo que as vezes possa passar por pontos de interesse despercebidos pode levar a direcionamentos interessantes. A heurística aprimora os caminhos a serem percorridos, entretanto pode desconsiderar o melhorar caminho a percorrer. 
+De acordo com \cite{el}, heurística é uma técnica eficiente para um processo de busca. A heurística, mesmo que as vezes possa passar por pontos de interesse despercebidos pode levar a direcionamentos interessantes. A heurística aprimora os caminhos a serem percorridos, entretanto pode desconsiderar o melhorar caminho a percorrer. 
 
 Dentre as diversas heurísticas existentes, a que se destacou e mostrou melhor performance para o jogo Caapora foi o algoritmo A*
 	
@@ -498,7 +498,7 @@ O A* (lê-se A estrela) é um algoritmo de busca de caminho \textit{(pathfinding
 A função \textit{f(n)} representa o custo estimado da solução menos custosa passando por \textit{n} e chegando ao estado-objetivo. O A* utiliza também o método de lista aberta e fechada aonde listas abertas armazenam todos o nós que foram gerados porém ainda não examinados e a fechada armazena os nós que já analisados.
 
 O algoritmo A* é completo e eficiente contanto que a função heurística \textit{f(n)} não superestime o custo ate o estado-objetivo.
-
+\cite{aestar}
 \begin{comment}
 http://dsc.inf.furb.br/arquivos/tccs/monografias/2005-1jeanitabassanidasilvavf.pdf
 file:///C:/Users/Talita/Downloads/601-1351-2-PB.pdf
@@ -507,56 +507,39 @@ file:///C:/Users/Talita/Downloads/601-1351-2-PB.pdf
 \section{Orientação Objeto}
 \label{sec:orientação-objeto}	
 
-O paradigma orientado a objeto busca representar o universo de desenvolvimento de software como o mundo real de forma a evitar reutilização de código, abstração de código, maior facilidade de leitura do código.
+O termo "Orientação a Objeto" conota o processo de modelar um sistema como "um grupo de agentes autônomos que colaboram para realizar algum procedimento de alto nível" (Booch, 1991:15)
+
 
 \subsection{Classes e Objetos}	
 
 Uma implementação de um objeto é definida por sua classe. A classe especifica os dados internos de um objeto, sua representação e define as operações que um ele pode realizar.
 (Weinand, Gamma, Marty, 1988)
 
-Podemos dizer então que as classes representam uma forma de um grupo de objetos definindo como serão seus comportamentos e características antes de criá-lo (instanciar).
-
 
 \subsection{Classes Abstratas}	
 
 Classe abstrata é aquela que possui como propósito principal definir uma interface comum entre suas subclasses definindo parte ou toda a implementação de suas operações.
-(Weinand, Gamma, Marty, 1988)
+(Design Patterns: Elements of Reusable Object-Oriented Software (Weinand, Gamma, Marty, 1988, pg 27)
 
-(Design patternet: reusable pg 27)
-
-Uma classe abstrata define características e comportamentos comuns as suas classes de forma a tornar o código mais escalável e evitar repetição de código.
 
 \subsection{Interface}	
-Interface é um recurso da orientação a objetos que permite criamos uma aplicação com um maior nível de abstração, definindo comportamentos que deverão ser obrigatórios para as classes que implementarão uma interface definida.
 
+Interface é a visão externa de, por exemplo, uma classe, objeto, componente, ou estrutura composta, que enfatiza sua abstração enquanto esconde sua estrutura e os segredos de seu comportamento.
+
+Object-Oriented Analysis and Design with Applications Third Edition, Booch, 2007 pagina 596) 
 
 \subsection{Padrões de Projeto}	
-Christopher Alexander says, "Each pattern describes a problem which occurs over
-and over again in our environment, and then describes the core of the solution
-to that problem, in such a way that you can use this solution a million times
-over, without ever doing it the same way twice" [AIS+77].
+Christopher alexandre disse, "Cada Padrão descreve um problema que ocorre repetidamente no nosso ambiente, e então descreve a solução chave para o problema, de tal forma que você pode usar essa solução milhares de vezes, sem nunca vir a repeti-lo."
 
-(Design patternet: reusable pg 12)
+(A Pattern Language: Towns, Buildings, Construction Por Christopher Alexander,Sara Ishikawa,Murra, 1977, pg 12 )
 
 
 \subsection{Singleton}	
-Padrão de projeto criacional que garante uma única instancia para um objeto de uma determinada classe. Exemplos do uso deste modelo são nas \textit{Classes Player} e \textit{GameManager} que podem ter uma única instancia durante todo o jogo.
+Este Padrão de projeto garante que uma classe tenha apenas uma instância, e forneça um ponto global de acesso a ela.  
+(Design Patterns: Elements of Reusable Object-Oriented Software - pagina 144)
 
-
-Singleton (144), canensure there's only one
-maze per game and that all game objects haveready access to it—without resorting
-to global variables orfunctions. Singleton also makes it easy to extend or replace
-the mazewithout touching existing code. 
-
-
-(Design patternet: reusable pg 98)
 
 \subsection{Object Pool}	
+Este padrão de projeto segundo [Autor, Autor, ano ] gerencia o reuso de objetos quando eles consomem muito recurso para criar ou quando há um limite no numero de um tipo especifico de objetos que podem ser criados.
 
-Manage the reuse of objects when it is either expensive to create an object or there is a limit on the number objects of a particular type that can be created.
-
-revista Net Objectives pagina 10
-
-
-
-Padrão de projeto criacional que permite alocar um grupo de objetos em uma estrutura para posterior uso sobre demanda. No \textit {game} foi utilizado para armazenar objetos do tipo fogo que seriam que ser multiplicados durante o jogo dando um efeito de expansão das chamas.
+[Cap. 22 do livro Design Patterns Explained: A New Perspective on Object-Oriented Design, Alan Shalloway,James R. Trott ,  2004]

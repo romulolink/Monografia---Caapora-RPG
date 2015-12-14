@@ -46,10 +46,16 @@ Foram definidos os seguintes requisitos funcionais, conforme exibido na Tabela 2
 			RF4 & A movimentação do personagem será controlada através do \textit{touchscreen} com controle direcional.\\
 			R05 & Usuário terá a capacidade pegar o balde aguá quando tocado na tela do botão...\\
 			RF6 & Usuário terá a capacidade jogar água no fogo apertando na tela o botão...\\
-			RF7 & O jogo apresentará uma barra de vida do personagem Caapora que no qual ira diminuir toda vez que ele for 'queimado' \\
-			RF8 & O balde devera ter uma barra de informação que mostrara o tanto de aguá que já foi enchido\\
+			RF7 & O jogo apresentará uma barra de vida do personagem Caapora que no qual ira diminuir toda vez que ele sofrer dano \\
+			RF8 & O balde deverá ter uma barra de informação que informará a quantidade de aguá que já foi enchido\\
 			RF9 & Caso o usuário consiga apagar todo o fogo no tempo determinado, sera mostrada uma tela dizendo que o jogador conseguiu \\
 			RF10 & Caso o usuário não consiga apagar todo o fogo em tempo determinado, sera mostrada uma tela dizendo que o jogador falhou\\
+			RF11 & Caso o jogador deixe o personagem sofrer dados que o faça perder todos os pontos de vida será mostrada uma tela dizendo que o jogador falhou \\
+			RF12 & Caso o jogador deixe o personagem amigo sofrer dados que o faça perder todos os pontos de vida será mostrada uma tela dizendo que o jogador falhou \\
+			RF13 & Os personagens amigos do personagem principal devem segui-lo em sua jornada  \\
+			RF14 & Os pontos de vida, experiência e nível devem ser exibidos em tempo-real  \\
+			RF15 & Os jogo deve exibir dicas por um período de tempo de como proceder em cada etapa na primeira fase  \\
+			RF16 & A câmera principal do jogo deve perseguir o personagem principal em sua jornada  \\
 			
 			\bottomrule
 		\end{tabular}
@@ -71,7 +77,9 @@ Foram definidos os seguintes requisitos não funcionais, conforme exibido na Tab
 			\midrule \midrule
 			RNF1 & O aplicativo deve funcionar na versão 3.0 do Android ou superior.\\
 			RFN2 & O carregamento do jogo deve durar no máximo 10 segundos. \\
-			RFN3 & A tela do dispositivo móvel deve ser \textit{touchscreen} e com tamanho minimo de XXX por XXXX\\
+			RFN3 & A tela do dispositivo móvel deve ser \textit{touchscreen} e com resolução minima de 480 por 800 pixels \\
+			RFN4 & A interface gráfica deve ser de fácil utilização  \\
+			RFN5 & O jogo deverá possuir portabilidade para múltiplas plataformas  \\
 			
 						\bottomrule
 		\end{tabular}
@@ -117,23 +125,23 @@ A tabela 4 representa o caso de uso "Jogar" que detalha a interação do jogador
 \Fonte{Elaborado pelo autor} 
 \end{table}
 
-\subsection{Caso de uso Selecionar Personagem} 
-A tabela 5 representa o caso de uso "Selecionar Personagem" que detalha a interação do jogador com a aplicação sempre que o jogador desejar trocar o personagem dentro do jogo.
+\subsection{Caso de uso Personagem} 
+A tabela 5 representa o caso de uso "Personagem" que detalha a interação do jogador com a aplicação sempre que o jogador desejar trocar o personagem dentro do jogo.
 
 \begin{table}[h!]
 \centering 
-\Caption{\label{tab:caso-selecionar-personagem}Documentação do caso de uso Selecionar Personagem} 
+\Caption{\label{tab:caso-selecionar-personagem}Documentação do caso de uso Personagem} 
 \begin{tabular}{ | m{5cm} | m{8cm}| }  
 \hline
-\textbf {Nome do Caso de uso} & Selecionar Personagem \\ 
+\textbf {Nome do Caso de uso} & Personagem \\ 
 \textbf {Ator Principal} & Jogador \\  
 \textbf {Resumo} & Esse caso de uso descreve as etapas percorridas por um jogador durante a seleção de personagem \\ 
 \textbf {Pré - condições} & Não se aplica\\ 
 \hline 
 \textbf {Ações do Ator} & \textbf {Ações do Sistema}\\ 
 \hline 
-1- O jogador seleciona a opção "Selecionar Personagem" na interface & 2 - Sistema exibe uma tela contendo personagens\\
-3 - Jogador seleciona a personagem desejado & 4 - Sistema valida a escolha do jogador\\
+1- O jogador seleciona a opção "Personagem" na interface & 2 - Sistema exibe uma tela contendo personagens\\
+3 - Jogador seleciona o personagem desejado & 4 - Sistema valida a escolha do jogador\\
 5 - Jogador aguarda a validação do sistema & 6 - Sistema retorna ao menu principal.\\
 \hline 
 \end{tabular} 
