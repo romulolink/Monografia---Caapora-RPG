@@ -1,10 +1,12 @@
 \chapter{Desenvolvimento}
 \label{cap:desenvolvimento}
 
-
 Neste capitulo, serão apresentados os conceitos envolvidos no desenvolvimento do jogo.
 
-\section{Cena do Menu Principal}
+\section{Cenas do jogo}
+O jogo esta dividido em três cenas, que são: Menu Principal, Tutorial e Jogo.
+
+\subsection{Menu Principal}
 O menu principal é a primeira tela que o usuário terá contato ao abrir a aplicação. Nela o usuário poderá começar o jogo, selecionar personagem, alterar configuração de som e sair do jogo.
 
 A figura 20 apresenta a tela inicial de jogo que será apresentada ao usuário.
@@ -19,16 +21,16 @@ A figura 20 apresenta a tela inicial de jogo que será apresentada ao usuário.
 		}	
 	\end{figure}
 	
-\subsection{Botões}
+\subsubsection{Botões}
 Para criar os botões no menu foi utilizado um componente chamado UI, ele é um sistema que permite criar interfaces rápida e intuitivas. 
 
-\subsection{Título }
+\subsubsection{Título }
 Para criar o titulo foi usado um componente do sistema UI, chamado text que permite inserir um texto dentro de uma determinada área. Ele também permite editar alguns detalhes como tipo de fonte, tamanho e cor.
 
-\subsection{Imagem de fundo}
+\subsubsection{Imagem de fundo}
 Para inserir a imagem de fundo foi preciso adicionar um componente do UI chamado Panel. Ele delimita a área da do jogo, facilitando assim a inserção da imagem de fundo.
 
-\section{Cena do Jogo}
+\subsection{Jogo}
 A cena do jogo foi construída tendo como base o mapa isométrico, que é um cenário mais próximo do 3D. Foi utilizado alguns recursos como: \textit{Tilesets}, \textit{Sprites}, Animação, \textit{Collider} e \textit{Rigidbody}.
 
 A figura 21 mostra o cenário completo.
@@ -43,7 +45,7 @@ A figura 21 mostra o cenário completo.
 		}	
 	\end{figure}
 
-\subsection{Tilesets}
+\subsubsection{Tilesets}
 Os \textit{tilesets} são elementos gráficos dentro de uma imagem. Eles possuem tudo o que é preciso para a construção de mapas e são classificados de acordo ao tipo de mapa que será criado, no caso do jogo caipora, foi usado um \textit{tileset} da floresta.
 
 Na figura 22 temos o \textit{tileset} usado no jogo.
@@ -57,7 +59,7 @@ Na figura 22 temos o \textit{tileset} usado no jogo.
 		}	
 	\end{figure}
 
-\subsection{Sprites}
+\subsubsection{Sprites}
 Os \textit{sprites} são elementos gráficos dentro de uma única imagem que tem como objetivo criar animações. Eles foram usados na criação dos personagens e dos animais. 
 
 A figura 23 mostra um dos \textit{sprites} do caipora.
@@ -73,7 +75,7 @@ A figura 23 mostra um dos \textit{sprites} do caipora.
 	\end{figure}
 
 
-\subsection{Animação}
+\subsubsection{Animação}
 A animação, tanto dos personagens quanto dos animais é criado dentro de um componente do Unity chamado Animation. Nele é criado um clipe de animação para cada ação do personagem, onde os \textit{sprites} são inseridos individualmente em uma linha do tempo e é determinada a velocidade que terá a animação.
 
 A figura 24 mostra a criação do clipe de animação “Caapora-left”, onde temos uma sequencia de \textit{sprites} inseridos na linha do tempo.
@@ -104,7 +106,7 @@ Após a criação dos clipes de animação, é necessário criar as transições
 	\end{figure}
 
 
-\subsection{Collider}
+\subsubsection{Collider}
 O colisor é um componente que impede que um objeto transpasse o outro, ele define a forma de um objeto para fins de colisões físicas.
 
 Ele foi utilizado tanto nos personagens quantos nos objetos do cenário afim de evitar que esses objetos não atravessassem os demais.
@@ -123,7 +125,7 @@ Na figura 26 temos um tile e o elemento de colisão em volta. As linhas que tra�
 
 
 
-\subsection{Rigidbody}
+\subsubsection{Rigidbody}
 O \textit{Rigibody} é um componente que permite um comportamento físico em um determinado objeto. Quando esse componente é anexado ao objeto, automaticamente esse objeto vai responder a gravidade.
 
 A figura 27 mostra o componente \textit{Rigidbody}.
@@ -143,7 +145,7 @@ A figura 27 mostra o componente \textit{Rigidbody}.
 
 \subsection{Pegar Balde}
 
- Para poder implementar este mecanismo foram utilizados os componentes \textit{BoxCollider} do personagem e do elemento balde que ao identificar a colisão um com o outro, permite que o caipora pegue o balde inserindo-o em seu inventário retirando o objeto balde do cenário dando a impressão do objeto ter sido coletado.
+ Para implementar este mecanismo foram utilizados os componentes \textit{BoxCollider} do personagem e do elemento balde que ao identificar a colisão um com o outro, permite que o caipora pegue o balde inserindo-o em seu inventário retirando o objeto balde do cenário dando a impressão do objeto ter sido coletado.
  
  O estado do personagem então muda para um estado que identifica ele com o balde e da mesma forma, habilita a animação do caipora para a animação com o balde permitindo que ele colete a água. Na figura 28 é possível visualizar o personagem Caipora com o balde capturado.
  \pagebreak
@@ -215,9 +217,7 @@ A figura 31 apresenta o personagem NPC \textit{Monkey} seguindo o Caipora com um
 		}	
 	\end{figure}
 	
-	\pagebreak
-	
-	
+
 	\section{Estrutura de Classes}
 	A figura 32 apresenta a estrutura de Classes dos Personagens utilizada para o desenvolvimento do jogo.
 	
@@ -225,11 +225,12 @@ A figura 31 apresenta o personagem NPC \textit{Monkey} seguindo o Caipora com um
 		\centering
 		\Caption{\label{fig:exemplo-1} Estrutura de Classes de Personagens }	
 		\UECEfig{}{
-			\fbox{\includegraphics[width=11cm]{figuras/DiagramaClassesPersonagens}}
+			\fbox{\includegraphics[width=15cm]{figuras/DiagramaClassesPersonagens}}
 		}{
 			\Fonte{Elaborado pelo autor}
 		}	
 	\end{figure}
+	\pagebreak
 	
 \subsection{GameManager}
 Está classe é responsável por gerenciador todo o ciclo de vida do jogo para isso ela  utiliza o padrão de projeto \textit{Singleton} que garante apenas uma instancia para um objeto durante toda a execução do jogo. Ela que implementa a maior parte da regra de negócio do jogo incluindo condições de vitórias e o fim de jogo.
@@ -237,18 +238,16 @@ Está classe é responsável por gerenciador todo o ciclo de vida do jogo para i
 \subsection{Enemy}
 Classe que representa os estados e comportamentos dos inimigos no jogo.
 
-
 \subsection{NPC}
 Personagens deste tipo implementam o algorítimo de \textit{pathfinding}  permitindo que movimentem-se sozinhos no jogo, possuindo uma inteligência artificial. Utiliza os métodos da classe \textit{Pathfinding} para personagens que perseguem o Caipora, é utilizando tanto amigos quanto em inimigos.
 
 A figura 33 apresenta a estrutura de Classes dos NPCs utilizada para o desenvolvimento do jogo.
 
-
 	\begin{figure}[h!]
 		\centering
 		\Caption{\label{fig:exemplo-1} Estrutura de Classes de NPC's }	
 		\UECEfig{}{
-			\fbox{\includegraphics[width=11cm]{figuras/DiagramaClassesNpc}}
+			\fbox{\includegraphics[width=15cm]{figuras/DiagramaClassesNpc}}
 		}{
 			\Fonte{Elaborado pelo autor}
 		}	
@@ -272,3 +271,10 @@ Classe que representa um fogo no \textit{game}, possui pontos de danos que são 
 
 \subsection{SpreadFire}
 Classe que automatiza a expansão do fogo pelo cenário, extraindo as instâncias do \textit{Object Pool} e inserindo no mapa tanto em linha quanto em círculos.
+
+\section{Funcionamento do jogo}
+A aplicação do Caapora RPG se inicia no menu principal, onde o jogador pode iniciar o jogo, escolher um personagem, alterar configurações e sair do jogo.
+
+Ao selecionar a opção jogar, é apresentado ao jogador a tela do tutorial, onde terá uma breve descrição do que o jogador deverá fazer durante o jogo. 
+
+Dentro da tela do jogo, a missão do jogador é apagar o fogo que está destruindo a mata, para isso ele deverá pegar um balde que está próximo ao rio e encher, com isso o jogador se dirige até o local onde está pegando e fogo e lança a aguá. A missão terminá quando todo o fogo na floresta for apagado. Os detalhes da missão estão descritos no \textit{Game Design Document} que esta no Apêndice.
