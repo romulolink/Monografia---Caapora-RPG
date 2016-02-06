@@ -69,6 +69,12 @@ A principal característica de jogos deste gênero é que o controle ocorre sobr
 		}	
 	\end{figure}
 
+\begin{alineascomponto}	
+\item Jogos Educacionais\\
+São jogos que possuem o intuito de ensinar as pessoas sobre determinado assunto, reforçando assim seu desenvolvimento e entendimento sobre um evento histórico ou cultural, ou ainda auxiliar na aprendizagem de alguma habilidade enquanto de joga. \cite{jd}
+
+\end{alineascomponto}
+
 \section{Categoria de Jogos}
 \label{sec:categoria-de-jogos}
 
@@ -369,10 +375,10 @@ São todos da equipe responsáveis pelo desenvolvimento em si do software, possu
 	
 O \textit{Product Owner} tem a visão final do produto, representado na figura 14 como grande cubo. Este cubo é "divido" em vários outros cubos pequenos, este chamado de \textit{Product Backlog}.
 
-O \textit{Product Backlog} pode ser descrito, em uma forma simplificada, como pequenas etapas/objetivos para se chegar ao produto final.
+O \textit{Product Backlog} pode ser descrito, em uma forma simplificada, como várias etapas/objetivos para se chegar ao produto final.
 Para planejar a prioridade dos \textit{Backloge} também quando e quanto tempo durará seu desenvolvimento, é utilizado o \textit{Sprint}.
 
-O \textit{Sprint} tem duração mediana de 2 a 4 semanas, mas é também flexível dependendo do tempo desenvolvimento final estimado no começo do planejamento.
+O \textit{Sprint} tem duração mediana de 1 a 4 semanas, mas é também flexível dependendo do tempo desenvolvimento final estimado no começo do planejamento.
 
 Também existe a técnica do \textit{Daily Scrum}. Nele é feita as três perguntas consideradas básicas para haver um melhor desenvolvimento de todos da equipe.
 Estas são:
@@ -496,30 +502,50 @@ file:///C:/Users/Talita/Downloads/601-1351-2-PB.pdf
 \section{Orientação Objeto}
 \label{sec:orientação-objeto}	
 
-O termo "Orientação a Objeto" conota o processo de modelar um sistema como "um grupo de agentes autônomos que colaboram para realizar algum procedimento de alto nível". \cite{gra}
+O termo "Orientação a Objeto" conota o processo de modelar um sistema como "um grupo de agentes autônomos que colaboram para realizar algum procedimento de alto nível".  
+Este paradigma possibilita o desenvolvimento de software baseado em objetos, assim como os do mundo real,  que interagem a fim de resolver um determinado problema.  
+  
+Segundo Daniel Clark , programação orientada a objeto pode ser definida como uma abordagem em desenvolvimento de software em que a estrutura do software é baseada na interação entre objetos para realizar uma tarefa.  
+  
+Ainda segundo Daniel Clark, os benefícios em utilizar este paradigma seriam: 
 
-Este paradigma possibilita o desenvolvimento de software baseado em objetos,assim como no mundo real onde eles interagem uns com os outros através de seus comportamentos e características tornando o processo de codificação mais fácil sobre uma ótica semântica.
+  \begin{alineascomponto}
+\item Uma transição mais intuitiva dos modelos de análise de negócio para implementação de modelos de software.  
+  
+\item A Possibilidade de manter e implementar mudanças no programa de forma mais eficiente e rápida.
 
-
+\item A possibilidade de reuso de componentes de código em outros programas dentre outros. 
+\end {alineascomponto}
+\cite{dan}
 
 \subsection{Classes e Objetos}	
 
-Uma implementação de um objeto é definida por sua classe. A classe especifica os dados internos de um objeto, sua representação e define as operações que um ele pode realizar. \cite{gam}
+Como dito na definição de orientação a objetos, objetos e suas interações  são recursos indispensáveis para a existência deste paradigma, neste contexto pode-se definir objeto como uma estrutura que incorpora dados e os procedimentos para trabalhar com estes dados.
+
+Para a construção dos objetos faz-se necessário  um outro recurso, conhecido como Classe que segundo Daniel Clark se entende por uma definição complexa de tipo de dado para um objeto e que ela contém informação sobre como um objeto deveria se comportar, incluindo seu nome, métodos, propriedades e eventos.   
+  
+Uma implementação de um objeto é definida por sua classe. A classe especifica os dados internos de um objeto, sua representação e define as operações que um ele pode realizar. \cite{dan}
 
 
 \subsection{Classes Abstratas}	
 
-Classe abstrata é aquela que possui como propósito principal definir uma interface comum entre suas subclasses definindo parte ou toda a implementação de suas operações. \cite{gram}
+Segundo Danny Poo, em uma hierarquia de classe há classes que são tão genéricas que não há intensão em criar objetos a partir delas. Tais classes são destinadas a conter apenas atributos ou métodos comuns a suas subclasses para propósito de reuso. Essas classes são conhecidas como abstratas. \cite{dany}
+  
+Já Booch diz que Classe abstrata é aquela que possui como propósito principal definir uma interface comum entre suas subclasses definindo parte ou toda a implementação de suas operações.  \cite{gra}
 
 
 \subsection{Interface}	
-Interface é a visão externa de, por exemplo, uma classe, objeto, componente, ou estrutura composta, que enfatiza sua abstração enquanto esconde sua estrutura e os segredos de seu comportamento. \cite{gra}
+Interface é a visão externa de, por exemplo, uma classe, objeto, componente, ou estrutura composta, que enfatiza sua abstração enquanto esconde sua estrutura e os segredos de seu comportamento. \cite{gra}  
+
+Segundo Klark  a utilização de interface é útil quando quisermos garantir que o código cliente que usa as classes saiba quais métodos estão disponíveis, como eles deveriam ser chamados, e os valores de retorno esperados. \cite{dan}
 
 \subsection{Padrões de Projeto}	
-Christopher alexandre disse, "Cada Padrão descreve um problema que ocorre repetidamente no nosso ambiente, e então descreve a solução chave para o problema, de tal forma que você pode usar essa solução milhares de vezes, sem nunca vir a repeti-lo." \cite{cris}
+Segundo Gamma, Padrões de projetos resolvem muitos dos problemas de  do dia-a-dia que arquitetos de software encontram, e de diversas formas diferentes. \cite{gram}   
+
+Christopher Alexandre disse, "Cada Padrão descreve um problema que ocorre repetidamente no nosso ambiente, e então descreve a solução chave para o problema, de tal forma que você pode usar essa solução milhares de vezes, sem nunca vir a repeti-lo." \cite{cris} 
 
 \subsection{Singleton}	
-Este Padrão de projeto garante que uma classe tenha apenas uma instância, e forneça um ponto global de acesso a ela.  \cite{gra}
+Este Padrão de projeto garante que uma classe tenha apenas uma instância, e forneça um ponto global de acesso a ela.  \cite{gra} 
 
 \subsection{Object Pool}	
-Este padrão de projeto segundo \cite{alan} gerencia o reuso de objetos quando eles consomem muito recurso para criar ou quando há um limite no numero de um tipo específico de objetos que podem ser criados. \cite{alan}
+Este padrão de projeto segundo Alan, ele gerencia o reuso de objetos quando eles consomem muito recurso para criar ou quando há um limite no numero de um tipo específico de objetos que podem ser criados. \cite{alan}
