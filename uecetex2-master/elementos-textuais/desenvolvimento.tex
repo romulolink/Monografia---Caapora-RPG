@@ -143,6 +143,8 @@ A figura 27 mostra o componente \textit{Rigidbody}.
 
 \section{Mecanismos}
 
+Nesta seção são apresentados os mecanismos principais que foram desenvolvidos dentro do jogo.
+
 \subsection{Pegar Balde}
 
  Para implementar este mecanismo foram utilizados os componentes \textit{BoxCollider} do personagem e do elemento balde que ao identificar a colisão um com o outro, permite que o caipora pegue o balde inserindo-o em seu inventário retirando o objeto balde do cenário dando a impressão do objeto ter sido coletado.
@@ -235,6 +237,8 @@ A figura 31 apresenta o personagem NPC \textit{Monkey} seguindo o Caipora com um
 \subsection{GameManager}
 Está classe é responsável por gerenciador todo o ciclo de vida do jogo para isso ela  utiliza o padrão de projeto \textit{Singleton} que garante apenas uma instancia para um objeto durante toda a execução do jogo. Ela que implementa a maior parte da regra de negócio do jogo incluindo condições de vitórias e o fim de jogo.
 
+\pagebreak
+
 \subsection{Enemy}
 Classe que representa os estados e comportamentos dos inimigos no jogo.
 
@@ -273,8 +277,63 @@ Classe que representa um fogo no \textit{game}, possui pontos de danos que são 
 Classe que automatiza a expansão do fogo pelo cenário, extraindo as instâncias do \textit{Object Pool} e inserindo no mapa tanto em linha quanto em círculos.
 
 \section{Funcionamento do jogo}
-A aplicação do Caapora RPG se inicia no menu principal, onde o jogador pode iniciar o jogo, escolher um personagem, alterar configurações e sair do jogo.
+A aplicação do Caapora RPG se inicia no menu principal, onde o jogador pode iniciar o jogo, escolher um personagem, alterar configurações e sair do jogo como mostra a figura 34.
 
-Ao selecionar a opção jogar, é apresentado ao jogador a tela do tutorial, onde terá uma breve descrição do que o jogador deverá fazer durante o jogo. 
+\pagebreak
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Menu Principal}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/Menu}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
 
-Dentro da tela do jogo, a missão do jogador é apagar o fogo que está destruindo a mata, para isso ele deverá pegar um balde que está próximo ao rio e encher, com isso o jogador se dirige até o local onde está pegando e fogo e lança a aguá. A missão terminá quando todo o fogo na floresta for apagado. Os detalhes da missão estão descritos no \textit{Game Design Document} que esta no Apêndice.
+Jogar: Ao selecionar a opção jogar, é apresentado ao jogador a tela do tutorial, onde terá uma breve descrição do que o jogador deverá fazer durante o jogo.
+
+Personagem: Ao selecionar a opção personagem, o jogador será direcionado para tela onde ele poderá selecionar o Caipora ou o Curupira para jogar.
+
+Opções: Ao selecionar o botão opções, o jogador poderá alterar algumas configurações como tirar a musica de fundo.
+
+Sair: Ao selecionar o botão sair o jogador fecha o jogo.
+
+Ao iniciar o jogo, a missão do jogador é apagar o fogo que está destruindo a mata, para isso ele deverá pegar um balde que está próximo ao rio, como mostra a figura 35.
+
+\pagebreak
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Jogador próximo ao balde.}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/CaiporaPegandoBalde}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+Ao pegar o balde o jogador deverá se dirigir até o rio, onde ao entrar em contato com o rio o balde encherá automaticamente. Na figura 36 temos o caipora enchendo o balde.
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Jogador próximo ao rio.}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/EnchendoBalde}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+Com isso o jogador deverá procurar os lugares na floresta onde a mata esta em chamas. Dentro do jogo, o jogador terá um recurso que permitirá que ele visualize todo o mapa, sabendo assim onde se encontra o fogo. Na figura 37 temos o mapa completo do jogo.
+
+\pagebreak
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-1} Mapa completo do jogo.}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=13cm]{figuras/MapaCompleto}}
+		}{
+			\Fonte{Elaborado pelo autor}
+		}	
+	\end{figure}
+
+Após localizar o local onde a mata esta pegando fogo, o jogador deverá lançar a água. A missão terminá quando todo o fogo na floresta for apagado. Os detalhes da missão estão descritos no \textit{Game Design Document} que esta no Apêndice.
