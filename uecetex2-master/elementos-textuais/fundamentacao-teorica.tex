@@ -69,7 +69,8 @@ A principal característica de jogos deste gênero é que o controle ocorre sobr
 			\Fonte{\cite{fifa}}			
 		}	
 	\end{figure}
-
+	
+\pagebreak
 \begin{alineascomponto}	
 \item Jogos Educacionais\\
 São jogos que possuem o intuito de ensinar as pessoas sobre determinado assunto, reforçando assim seu desenvolvimento e entendimento sobre um evento histórico ou cultural, ou ainda auxiliar na aprendizagem de alguma habilidade enquanto de joga. \cite{jd}
@@ -120,7 +121,7 @@ Se divide na categorias: Isométrico, projeção oblíqua, \textit{billboarding}
 			\Fonte{\cite{25d}}			
 		}	
 	\end{figure}
-	\pagebreak
+	
 \begin{alineascomponto}
 
 \item Jogos 3D\\
@@ -330,37 +331,70 @@ http://www.aplicativosandroid.com/conhecam-todas-as-versoes-do-android-e-seus-ma
 \section{Scrum}
 \label{sec:scrum}
 
-Scrum é uma metodologia ágil para gestão e planejamento de projetos de softwares e sua base fundamental pode ser bem descrita na figura 12.
+Segundo Jeff Sutherland, o criador da metodologia, o SCRUM foi criado para ser uma forma mais rápida, eficaz e confiável de criar softwares para o setor de tecnologia. \cite{jeff}
+
+A metodologia apresentada pelo seu co-criado, Ken Schwaber, nos fala que SCRUM é um \textit{framework} na qual possibilita o emprego de diversos processos e técnicas. Ele define também que o papel do Scrum é "fazer
+transparecer a eficácia relativa das suas práticas de desenvolvimento para que você possa melhorá-las, enquanto provê um \textit{framework} dentro do qual produtos complexos podem ser desenvolvidos." \cite{Kenn}
+
+O Scrum é formado por um conjunto de Times Scrum com papeis associados, Eventos com duração fixa (Time-Boxes), Artefatos e Regras.
+
+O Time Scrum visa otimizar a produtividade e flexibilidade, e para atingir este fim, o Time é dividido em três papeis.
+
+\begin{alineascomponto}
+\item \textit{Scrum Master}
+
+Responsável por garantir que o processo seja entendido e seguido, fazendo com que o Time esteja de acordo com  metodologia Scrum suas párticas e regras, ajudando-os a a entender o auto- gerenciamento e a interdisciplinaridade.
+
+\item \textit{Product Owner}
+
+Responsável por maximizar o valor do trabalho do Time Scrum e também o único responsável pelo gerenciamento do Backlog do Produto garantido que este esteja visível a todos, para que o Time consiga compreender quais itens possuem maior prioridade. 
+
+\item {Time}
+	
+Executa o trabalho propriamente dito, desenvolvendo o Backlog do Produto entregáveis em cada Sprint. os membros do Time devem possuir total conhecimento necessário pra o desenvolvimento. Os times são auto-organizáveis, nem mesmo o Scrum Master pode interferir e dizer ao time como transformar o Backlog em funcionalidades entregáveis.
+O tamanho desejável para um time  é de sete pessoas.
+\end{alineascomponto}
+
+A figura 12 apresenta interação entre os papeis.
 
 	\begin{figure}[h!]
 		\centering
-		\Caption{\label{fig:exemplo}Prática do Scrum}	
+		\Caption{\label{fig:exemplo-3} Interação entre os papeis }	
 		\UECEfig{}{
-			\fbox{\includegraphics[width=10cm]{figuras/PraticaScrum}}
+			\fbox{\includegraphics[width=08cm]{figuras/roles}}
 		}{
-			\Fonte{\cite{scrum}}			
-		}	
+		\Fonte{\cite{int}}			
+	}	
 	\end{figure}
 
-Cada equipe de Scrum, geralmente, possuem 3 papéis:
-\begin{alineascomponto}
-	\item \textit{Product Owner}
-	
-É responsável por decidir os recursos e funcionalidades utilizadas no projeto é também sua responsabilidade manter clareza no objetivo do projeto, para que haja uma melhor interação o ProductOwner geralmente colabora com o ScrumMaster.
+\subsection{Time-Boxes}
+Consiste em Reunião de planejamento, revisão e retrospectiva da Sprint, Sprint e Reunião Diária.
 
-	\item \textit{Scrum Master}
-	
-É de sua responsabilidade ajudar todos envolvidos a entender os valores, princípios e práticas do Scrum. Também fica responsável por melhorias no uso do Scrum e está sempre orientando para que não haja a perda de foco. 
+Sprint
 
-	\item \textit{Development Team}
-	
-São todos da equipe responsáveis pelo desenvolvimento em si do software, possuem papéis como: arquiteto, testador, programador, entre outros. Para esta equipe é recomendável que se organizem para determinar a melhor maneira de realizar o trabalho.
-\pagebreak
+São eventos com duração fixa, onde durante o \textit {ScrumMaster} garante que não será feita nenhuma alteração que possa afetar a Meta Sprint. As Sprints consistem na reunião de Planejamento, Revisão e Retrospectiva. Elas também ocorrem sem intervalos, um após outra.
 
-	\end{alineascomponto}
-	
-		A figura 13 representa o processo de interação das atividades.
+Reunião Diária
 
+O Time se encontra diariamente para reuniões de 15 minutos, visando melhorar comunicação e remover impedimentos no desenvolvimento. Nessas reuniões cada membro explica:
+
+\begin{enumerate}
+   \item O que ele realizou desde a última reunião diária;
+   \item O que ele vai fazer antes da próxima reunião diária;
+   \item  Quais obstáculos estão em seu caminho.
+ \end{enumerate}
+
+Backlog do Produto
+
+Representa todas as necessidades para desenvolver e lançar um produto junto com os requisitos do produto que o Time está desenvolvendo, o responsável por ele é o Product Owner.  Backlog vai evolui na mesma proporção que o produtoç ele é flexivel, está constantemente mudando par identificar as necessidades do produto para melhor aprimorá-lo. Enquanto existir o produto, o Backlog do Produto também existirá.
+
+Backlog da Sprint
+
+Consiste em tarefas que o Time executa para transformar itens do Backlog do Produto em um incremento pronto. O Time modifica o Backlog da Sprint durante a Sprint assim quando ocorre as tarefas individuais é possível identificar quais tarefas são necessárias ou que a tarefa pode levar mais ou menos tempo pra ser concluída
+.
+
+	
+A figura 13 representa o processo de interação das atividades.
 
 	\begin{figure}[h!]
 		\centering
@@ -371,23 +405,6 @@ São todos da equipe responsáveis pelo desenvolvimento em si do software, possu
 		\Fonte{\cite{scrum}}			
 	}	
 	\end{figure}
-	
-O \textit{Product Owner} tem a visão final do produto, representado na figura 14 como grande cubo. Este cubo é "divido" em vários outros cubos pequenos, este chamado de \textit{Product Backlog}.
-
-O \textit{Product Backlog} pode ser descrito, em uma forma simplificada, como várias etapas/objetivos para se chegar ao produto final.
-Para planejar a prioridade dos \textit{Backloge} também quando e quanto tempo durará seu desenvolvimento, é utilizado o \textit{Sprint}.
-
-O \textit{Sprint} tem duração mediana de 1 a 4 semanas, mas é também flexível dependendo do tempo desenvolvimento final estimado no começo do planejamento.
-
-Também existe a técnica do \textit{Daily Scrum}. Nele é feita as três perguntas consideradas básicas para haver um melhor desenvolvimento de todos da equipe.
-Estas são:
-
-\begin{enumerate}
-   \item O que fiz ontem que ajudou o time a atingir a meta do \textit{Sprint}?
-   \item O que vou fazer hoje para ajudar o time a atingir a meta do \textit{Sprint}?
-   \item  Existe algum impedimento que não permita a mim ou ao time atingir a meta do \textit{Sprint}?
- \end{enumerate}
- \cite{scrum}
  
 
 \section{Controle de Versão}

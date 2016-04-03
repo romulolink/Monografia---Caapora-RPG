@@ -4,7 +4,7 @@
 Neste capitulo, serão apresentados os conceitos envolvidos no desenvolvimento do jogo.
 
 \section{Cenas do jogo}
-O jogo esta dividido em três cenas, que são: Menu Principal, Tutorial e Jogo.
+O jogo esta dividido em duas cenas, que são: Menu Principal e Jogo.
 
 \subsection{Menu Principal}
 O menu principal é a primeira tela que o usuário terá contato ao abrir a aplicação. Nela o usuário poderá começar o jogo, selecionar personagem, alterar configuração de som e sair do jogo.
@@ -39,7 +39,7 @@ A figura 21 mostra o cenário completo.
 		\centering
 		\Caption{\label{fig:exemplo-1} Cenário do jogo Caapora RPG}	
 		\UECEfig{}{
-			\fbox{\includegraphics[width=13cm]{figuras/cena}}
+			\fbox{\includegraphics[width=13cm]{figuras/Cena}}
 		}{
 			\Fonte{Elaborado pelo autor}
 		}	
@@ -90,6 +90,7 @@ A figura 24 mostra a criação do clipe de animação “Caapora-left”, onde t
 		}	
 	\end{figure}
 
+\pagebreak
 
 Após a criação dos clipes de animação, é necessário criar as transições entre eles. Para isso o Unity fornece um componente chamado \textit{Animator}. No \textit{animator}, conforme vemos na figura 25, os clipes de animação são ligados através das transições, que são as setas indo de um clipe para outro, e é criado condições para que haja a transição, ou seja, sempre que houver uma condição dentro do jogo, haverá uma mudança entre os clipes de animação.
 	
@@ -174,7 +175,7 @@ A figura 29 apresenta o Caipora jogando água nas chamas.
 		\centering
 		\Caption{\label{fig:exemplo-1} Caipora lançando água nas chamas}	
 		\UECEfig{}{
-			\fbox{\includegraphics[width=9cm]{figuras/CaiporaJogandoAgua}}
+			\fbox{\includegraphics[width=10cm]{figuras/CaiporaJogandoAgua}}
 		}{
 			\Fonte{Elaborado pelo autor}
 		}	
@@ -303,7 +304,7 @@ Ao iniciar o jogo, a missão do jogador é apagar o fogo que está destruindo a 
 \pagebreak
 \begin{figure}[h!]
 		\centering
-		\Caption{\label{fig:exemplo-1} Jogador próximo ao balde.}	
+		\Caption{\label{fig:exemplo-1} Caipora próximo ao balde.}	
 		\UECEfig{}{
 			\fbox{\includegraphics[width=13cm]{figuras/CaiporaPegandoBalde}}
 		}{
@@ -311,11 +312,11 @@ Ao iniciar o jogo, a missão do jogador é apagar o fogo que está destruindo a 
 		}	
 	\end{figure}
 
-Ao pegar o balde o jogador deverá se dirigir até o rio, onde ao entrar em contato com o rio o balde encherá automaticamente. Na figura 36 temos o caipora enchendo o balde.
+Ao pegar o balde o jogador deverá se dirigir até o rio, onde ao entrar em contato com o rio o balde encherá automaticamente, fazendo com que a barra de água seja preenchida. Na figura 36 temos o caipora enchendo o balde.
 
 \begin{figure}[h!]
 		\centering
-		\Caption{\label{fig:exemplo-1} Jogador próximo ao rio.}	
+		\Caption{\label{fig:exemplo-1} Caipora enchendo o balde.}	
 		\UECEfig{}{
 			\fbox{\includegraphics[width=13cm]{figuras/EnchendoBalde}}
 		}{
@@ -336,4 +337,4 @@ Com isso o jogador deverá procurar os lugares na floresta onde a mata esta em c
 		}	
 	\end{figure}
 
-Após localizar o local onde a mata esta pegando fogo, o jogador deverá lançar a água. A missão terminá quando todo o fogo na floresta for apagado. Os detalhes da missão estão descritos no \textit{Game Design Document} que esta no Apêndice.
+Após localizar o local onde a mata esta pegando fogo, o jogador deverá se dirigir até o local e  lançar a água. A missão terminá quando todo o fogo na floresta for apagado. Os detalhes da missão estão descritos no \textit{Game Design Document} que esta no Apêndice.
