@@ -46,7 +46,7 @@
 
 \trabalhoacademico{tccgraduacao}
 %\trabalhoacademico{tccespecializacao}
-%\trabalhoacademico{dissertacao}
+% \trabalhoacademico{dissertacao}
 %\trabalhoacademico{tese}
 
 % Define se o trabalho eh uma qualificacao
@@ -67,7 +67,7 @@
 %%          Informação sobre a IES                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ies{IBTA - Instituto Brasileira de Tecnologia Avançada}
+\ies{Faculdade Bilac}
 \iessigla{BILAC}
 % \centro{Centro de Ciências e Tecnologia}
 
@@ -82,7 +82,7 @@
 %%     Informação para TCC de Especializacao       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\especializacaoem{Alfabetização de Crianças}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%         Informação para Dissertacao             %%
@@ -97,10 +97,7 @@
 %%               Informação para Tese              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\programadoutorado{Programa de Pós-Graduação em Saúde Coletiva}
-\nomedodoutorado{Doutorado em Saúde Coletiva}
-\doutorem{Saúde Coletiva}
-\areadeconcentracaodoutorado{Saúde Coletiva}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Informação relacionadas ao trabalho     %%
@@ -119,8 +116,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \orientador{Prof. Msc Marcos Flávio de Souza Reis}
-\orientadories{Universidade Estadual do Ceará – UECE}
-\orientadorcentro{Centro de Ciências e Tecnologia - CCT}
+ 
+\orientadorcentro{Faculdade Bilac}
 \orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -128,11 +125,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Deixe o nome do coorientador em branco para remover do documento
-
-\coorientador{}
-\coorientadories{Universidade Co-orientador - SIGLA}
-\coorientadorcentro{Centro do Co-orientador - SIGLA}
-\coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
+% Coloque 'sim' se for do sexo feminino
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%      Informação sobre a banca           %%
@@ -143,29 +136,22 @@
 % Exemplo de uso:
 % \membrodabancadois{Prof. Dr. Fulano de Tal}
 % \membrodabancadoisies{Universidade Estadual do Ceará - UECE}
+\membrodabancadois{Prof. Me. Gerson Penha Neto}
 
-\membrodabancadois{Membro da Banca Dois}
-\membrodabancadoiscentro{Faculdade de Filosofia Dom Aureliano Matos – FAFIDAM}
-\membrodabancadoisies{Universidade do Membro da Banca Dois - SIGLA}
-\membrodabancatres{Membro da Banca Três}
-\membrodabancatrescentro{Centro de Ciências e Tecnologia - CCT}
-\membrodabancatresies{Universidade do Membro da Banca Três - SIGLA}
-\membrodabancaquatro{Membro da Banca Quatro}
-\membrodabancaquatrocentro{Centro de Ciências e Tecnologia - CCT}
-\membrodabancaquatroies{Universidade do Membro da Banca Quatro - SIGLA}
-\membrodabancacinco{Membro da Banca Cinco}
-\membrodabancacincocentro{Teste}
-\membrodabancacincoies{Universidade do Membro da Banca Cinco - SIGLA}
-\membrodabancaseis{Membro da Banca Seis}
-\membrodabancaseiscentro{}
-\membrodabancaseisies{Universidade do Membro da Banca Seis - SIGLA}
+\membrodabancadoisies{Faculdade Bilac}
 
-\begin{document}	
+\membrodabancatres{Prof. Valentino D'Ambrosi Junior}
+
+\membrodabancatresies{Faculdade Bilac}
+
+
+
+\begin{document}
+
 	% Elementos pré-textuais
 	\imprimircapa
-	\imprimirfolhaderosto{}
+    \imprimirfolhaderosto{}
 	\imprimirfichacatalografica{elementos-pre-textuais/ficha-catalografica}
-	\imprimirerrata{elementos-pre-textuais/errata}
 	\imprimirfolhadeaprovacao
 	\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
 	\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
@@ -174,10 +160,11 @@
 	\imprimirabstract{elementos-pre-textuais/abstract}
 	\imprimirlistadeilustracoes
 	\imprimirlistadetabelas
-	\imprimirlistadequadros
-	\imprimirlistadealgoritmos
-	\imprimirlistadeabreviaturasesiglas	
-	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
+%	\imprimirlistadequadros
+%	\imprimirlistadealgoritmos
+%	\imprimirlistadecodigosfonte
+%	\imprimirlistadeabreviaturasesiglas
+	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}
 	\imprimirsumario
 	
 	%Elementos textuais
@@ -185,8 +172,8 @@
 	\input{elementos-textuais/introducao}
 	\input{elementos-textuais/fundamentacao-teorica}
 	\input{elementos-textuais/trabalhos-relacionados}
-	\input{elementos-textuais/metodologia}
-	\input{elementos-textuais/resultados}
+	\input{elementos-textuais/analise-e-levantamento-de-requisitos}	
+	\input{elementos-textuais/desenvolvimento}
 	\input{elementos-textuais/conclusao}
 	
 	%Elementos pós-textuais	
@@ -194,13 +181,9 @@
 	\imprimirglossario	
 	\imprimirapendices
 		% Adicione aqui os apendices do seu trabalho
-		\input{elementos-pos-textuais/apendices/historico-de-mudancas}
-		\input{elementos-pos-textuais/apendices/lorem-ipsum}
-		\input{elementos-pos-textuais/apendices/termo-de-fiel-depositario}	
-	\imprimiranexos
-		% Adicione aqui os anexos do seu trabalho
-		\input{elementos-pos-textuais/anexos/exemplo-de-anexo}		
-		\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
-	\imprimirindice
+				\input{elementos-pos-textuais/apendices/lorem-ipsum}
+			
+
+	
 
 \end{document}

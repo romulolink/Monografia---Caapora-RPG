@@ -1,0 +1,203 @@
+\chapter{Análise e Projeto do Sistema}
+\label{chap:Analise-e-levantamento-de-requisitos}
+
+Neste capitulo é feito uma análise sobre um jogo com objetivos semelhante ao Caapora RPG, assim também como é apresentado os requisitos e a modelagem do sistema.
+
+\section{Análise de Produtos Semelhantes}
+\label{sec:analise-de-produtos-semelhantes}
+
+Um dos jogos que possui objetivos semelhantes ao do Caapora RPG e que coincidiu com a motivação do desenvolvimento é o jogo \textit{Pora: Free Cockatoos} representado na figura 18.
+
+A \textit{Indonesian Society for Animal Welfare} (traduzido do inglês livre Sociedade Indonésio para o Bem Estar dos Animais)junto com outros desenvolvedores
+criaram um aplicativo para conscientizar e educar em massa. “Muitas pessoas agora usam smartphones desde muito jovens”, diz Kinanti Kusumawardani, diretor executivo da \textit{Indonesian Society for Animal Welfare}. “Jogos para celular são um meio para chamar a atenção de maneira lúdica, uma vez que as pessoas parecem estar menos interessadas em ouvir palestras sobre o assunto”.
+
+Para o desenvolvimento do jogo foi realizada uma competição em que os desenvolvedores deveriam criar um jogo que estimulasse a preservação da vida selvagem.
+
+O Jogo \textit{Pora: Free Cockatoos} tem como personagem principal um peixe chamado Pora que possui um canhão onde ele lança torpedos aos caçadores que aprisionam as cacatuas.
+Os vilões prendem as aves dentro de garrafas plásticas, uma prática maldosa que realmente acontece.
+
+“Os jogos podem fazer com que usuários se sintam envolvidos por uma causa sem que pareça algo muito sério”, afirmou Andi Surja Boediman, um parceiro da empresa que trabalha com os desenvolvedores. “É eficaz para promover a conscientização” \cite{anda}
+
+\begin{figure}[h!]
+		\centering
+		\Caption{\label{fig:exemplo-6} Jogo Pora: Free Cockatoos desenvolvido para conscientização dos mal tratos as aves da Indonésia}	
+		\UECEfig{}{
+			\fbox{\includegraphics[width=9cm]{figuras/pora}}
+		}{
+			\Fonte{\cite{anda}}
+		}	
+	\end{figure}
+\pagebreak
+\section{Requisitos do Sistema}
+\label{sec:requisito-do-sistema}
+
+Nesta seção são apresentados os requisitos do jogo que foram divididos em duas partes, requisitos funcionais e requisitos não funcionais. 
+
+\subsection {Requisitos Funcionais}
+
+Foram definidos os seguintes requisitos funcionais, conforme exibido na Tabela 2:
+\begin{table}[h!]	
+	\centering
+	\Caption{\label{tab:requiitos-funcionais}Requisitos Funcionais}	
+	\IBGEtab{}{
+		\begin{tabular}{cp{13cm}}
+			\toprule
+			Requisto & Função \\
+			\midrule \midrule
+			RF1 & O jogo deve ter um menu inicial contendo as seguintes opções: Iniciar Jogo e Opções. \\
+			RF2 & Ao iniciar o jogo, o jogo deve apresentar um resumo sobre o cenário ao qual o jogador estará durante o jogo.\\
+			RF3 & O jogo deve ter a opção de Pular o resumo do inicio do jogo.\\
+			RF4 & A movimentação do personagem será controlada através do \textit{touchscreen} com controle direcional.\\
+			R05 & Usuário terá a capacidade de pegar o balde de aguá quando o ícone da mão for tocado.\\
+			RF6 & Usuário terá a capacidade jogar água no fogo apertando na tela o botão de ataque.\\
+			RF7 & O jogo apresentará uma barra de vida do personagem Caapora que irá diminuir toda vez que ele sofrer dano \\
+			RF8 & O balde deverá ter uma barra de informação que informará a quantidade de água que já foi enchido\\
+			RF9 & Caso o usuário consiga apagar todo o fogo no tempo determinado, será mostrada uma tela dizendo que o jogador conseguiu \\
+			RF10 & Caso o usuário não consiga apagar todo o fogo em tempo determinado, será mostrada uma tela dizendo que o jogador falhou\\
+			RF11 & Caso o jogador deixe o personagem sofrer dados que o faça perder todos os pontos de vida será mostrada uma tela dizendo que o jogador falhou \\
+			RF12 & Caso o jogador deixe o personagem amigo sofrer danos que o faça perder todos os pontos de vida será mostrada uma tela dizendo que o jogador falhou \\
+			RF13 & Os personagens amigos do personagem principal devem segui-lo em sua jornada  \\
+			RF14 & Os pontos de vida, experiência e nível devem ser exibidos em tempo-real  \\
+			RF15 & Os jogo deve exibir dicas por um período de tempo de como proceder em cada situação na primeira fase  \\
+			RF16 & A câmera principal do jogo deve perseguir o personagem principal em sua jornada  \\
+			
+			\bottomrule
+		\end{tabular}
+	}{
+	\Fonte{Elaborado pelo autor}
+}
+\end{table}
+
+\subsection{Requisitos Não Funcionais}
+Foram definidos os seguintes requisitos não funcionais, conforme exibido na Tabela 3:
+\pagebreak
+
+\begin{table}[h!]	
+	\centering
+	\Caption{\label{tab:requisitos-nao-funcionais}Requisitos Não Funcionais}	
+	\IBGEtab{}{
+		\begin{tabular}{cp{13cm}}
+			\toprule
+			Requisito & Função \\
+			\midrule \midrule
+			RNF1 & O aplicativo deve funcionar na versão 3.0 do Android ou superior.\\
+			RFN2 & O carregamento do jogo deve durar no máximo 20 segundos. \\
+			RFN3 & A tela do dispositivo móvel deve ser \textit{touchscreen} e com resolução minima de 480 por 800 pixels \\
+			RFN4 & A interface gráfica deve ser de fácil utilização  \\
+			RFN5 & O jogo deve possuir portabilidade para múltiplas plataformas  \\
+			RFN6 & O jogo deve rodar com no mínimo com 30 FPS  \\
+			
+						\bottomrule
+		\end{tabular}
+	}{
+	\Fonte{Elaborado pelo autor}
+}
+\end{table}
+
+
+\section{Modelagem do Sistema} 
+\label{sec:modelagem-do-sistema}
+A figura 19 apresenta o caso de uso do jogo, apresentando as ações que o jogador pode executar na aplicação.
+\begin{figure}[h!] 
+\centering 
+\Caption{\label{fig:exemplo-} Caso de uso, ações do jogador}  
+\UECEfig{}{ 
+\fbox{\includegraphics[width=10cm]{figuras/casodeuso}} 
+}{ 
+\Fonte{Elaborado pelo autor} 
+}  
+\end{figure} 
+
+\subsection{Caso de uso Jogar}
+A tabela 4 representa o caso de uso "Jogar" que detalha a interação do jogador com a aplicação sempre que a opção Jogar for selecionada.
+
+\begin{table} [h!]
+\centering 
+\Caption{\label{tab:caso-de-uso-jogar}Documentação do caso de uso Jogar} 
+\begin{tabular}{ | m{5cm} | m{8cm}| }  
+\hline 
+\textbf {Nome do Caso de uso} & Jogar \\ 
+\textbf {Ator Principal} & Jogador \\  
+\textbf {Resumo} & Esse caso de uso descreve as etapas percorridas por um jogador após ele selecionar a opção jogar. \\ 
+\textbf {Pré - condições} & Não se aplica\\ 
+\hline 
+\textbf {Ações do Ator} & \textbf {Ações do Sistema}\\ 
+\hline 
+1- O jogador seleciona a opção "Jogar" no menu principal. & 2 - Sistema exibe uma tela contendo uma mensagem informativa sobre o jogo.\\ 
+3 - Jogador seleciona a opção "Pular" após ler as mensagens. & 4 - Sistema carrega o cenário do jogo.\\
+5 - Jogador aguarda o carregamento do cenário & 6 - Sistema inicia o jogo.\\
+7 - Jogador percorre o mapa até o balde. & 8 - Sistema atualiza o personagem após ele pegar o balde.\\
+9 - Jogador localiza o fogo e atira a água. & 10 - Sistema detecta a colisão e apaga o fogo.\\
+\hline 
+\end{tabular} 
+\Fonte{Elaborado pelo autor} 
+\end{table}
+
+\subsection{Caso de uso Personagem} 
+A tabela 5 representa o caso de uso "Personagem" que detalha a interação do jogador com a aplicação sempre que o jogador desejar trocar o personagem dentro do jogo.
+
+\begin{table}[h!]
+\centering 
+\Caption{\label{tab:caso-selecionar-personagem}Documentação do caso de uso Personagem} 
+\begin{tabular}{ | m{5cm} | m{8cm}| }  
+\hline
+\textbf {Nome do Caso de uso} & Personagem \\ 
+\textbf {Ator Principal} & Jogador \\  
+\textbf {Resumo} & Esse caso de uso descreve as etapas percorridas por um jogador durante a seleção de personagem \\ 
+\textbf {Pré - condições} & Não se aplica\\ 
+\hline 
+\textbf {Ações do Ator} & \textbf {Ações do Sistema}\\ 
+\hline 
+1- O jogador seleciona a opção "Personagem" na interface & 2 - Sistema exibe uma tela contendo personagens\\
+3 - Jogador seleciona o personagem desejado & 4 - Sistema valida a escolha do jogador\\
+5 - Jogador aguarda a validação do sistema & 6 - Sistema retorna ao menu principal.\\
+\hline 
+\end{tabular} 
+\Fonte{Elaborado pelo autor} 
+\end{table} 
+
+\subsection{Caso de uso Opções} 
+A tabela 6 representa o caso de uso "Opções" que detalha a interação do jogador com a aplicação sempre que o jogador quiser mudar alguma configuração. 
+
+\begin{table}  [h!]
+\centering 
+\Caption{\label{tab:caso-de-uso-opcoes}Documentação do caso de uso Opções} 
+\begin{tabular}{ | m{5cm} | m{8cm}| }  
+\hline 
+\textbf {Nome do Caso de uso} & Opções \\  
+\textbf {Ator Principal} & Jogador. \\  
+\textbf {Resumo} & Esse caso de uso descreve as etapas percorridas por um jogador após ele selecionar "Opções".\\ 
+\textbf {Pré - condições} & Não se aplica.\\ 
+\hline 
+\textbf {Ações do Ator} & \textbf {Ações do Sistema}\\ 
+\hline 
+1- O jogador seleciona a opção "Opções" na interface & 2 - Sistema exibe uma tela contendo informações sobre áudio e vídeo.\\ 
+3 - Jogador seleciona o item que deseja alterar & 4 - Sistema exibe o item escolhido\\
+5 - Jogador altera as configurações do item escolhido & 6 - Sistema valida as alterações\\
+7 - Jogador seleciona a opção voltar ao menu principal & 8 - Sistema retorna ao menu principal.\\
+\hline 
+\end{tabular} 
+\Fonte{Elaborado pelo autor} 
+\end{table} 
+ \pagebreak
+ 
+\subsection{Caso de uso Sair} 
+A tabela 7 representa o caso de uso "Sair" que detalha a interação do jogador com a aplicação sempre que o jogador desejar sair do jogo.
+
+\begin{table}  [h!]
+\centering 
+\Caption{\label{tab:caso-de-uso-sair}Documentação do caso de uso Sair} \begin{tabular}{ | m{5cm} | m{8cm}| }  
+\hline 
+\textbf {Nome do Caso de uso} & sair \\  
+\textbf {Ator Principal} & Jogador. \\  
+\textbf {Resumo} & Esse caso de uso descreve as etapas percorridas por um jogador após ele selecionar "Sair".\\ 
+\textbf {Pré - condições} & Não se aplica.\\ 
+\hline 
+\textbf {Ações do Ator} & \textbf {Ações do Sistema}\\ 
+\hline 
+1- O jogador seleciona a opção "Sair" na interface & 2 - Sistema fecha o jogo.\\ 
+\hline 
+\end{tabular} 
+\Fonte{Elaborado pelo autor} 
+\end{table} 
+ 
